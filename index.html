@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Ahmet Parmaksızoğlu | CV</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom: 1px solid #334155;
+      padding: 15px 20px;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #facc15;
+      font-weight: 800;
+      font-size: 22px;
+    }
+
+    .menu a {
+      margin-left: 18px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .menu a:hover {
+      color: #facc15;
+    }
+
+    header {
+      padding: 80px 20px;
+      background:
+        radial-gradient(circle at top left, #334155, transparent 35%),
+        linear-gradient(135deg, #0f172a, #111827);
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .profile-box {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 18px;
+      border: 2px solid #facc15;
+      background: #334155;
+    }
+
+    .profile-note {
+      margin-top: 12px;
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .hero-content {
+      background: rgba(30, 41, 59, 0.55);
+      border: 1px solid #334155;
+      border-radius: 22px;
+      padding: 38px;
+    }
+
+    .badge {
+      display: inline-block;
+      color: #facc15;
+      border: 1px solid #facc15;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 46px;
+      color: #facc15;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 21px;
+      color: #e2e8f0;
+      margin-bottom: 18px;
+    }
+
+    .hero-content p {
+      color: #cbd5e1;
+      max-width: 760px;
+    }
+
+    .buttons {
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      margin: 6px 8px 6px 0;
+      border-radius: 10px;
+      background: #facc15;
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #facc15;
+      border: 1px solid #facc15;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 20px;
+    }
+
+    section h2 {
+      color: #facc15;
+      font-size: 30px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 26px;
+      border-radius: 18px;
+      border: 1px solid #334155;
+      margin-bottom: 20px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+    }
+
+    .skill {
+      background: #334155;
+      padding: 14px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .timeline {
+      border-left: 2px solid #facc15;
+      padding-left: 22px;
+    }
+
+    .timeline-item {
+      margin-bottom: 24px;
+    }
+
+    .timeline-item h3 {
+      color: #facc15;
+    }
+
+    .timeline-item span {
+      color: #94a3b8;
+      font-size: 14px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .contact-item {
+      background: #334155;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .contact-item strong {
+      color: #facc15;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+      border-top: 1px solid #334155;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .profile-photo {
+        height: 380px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <header>
+    <div class="hero">
+
+      <div class="profile-box">
+        <img src="profil.jpg" alt="Ahmet Parmaksızoğlu Profil Fotoğrafı" class="profile-photo">
+        <p class="profile-note">Profil fotoğrafını <strong>profil.jpg</strong> adıyla aynı klasöre ekle.</p>
+      </div>
+
+      <div class="hero-content">
+        <span class="badge">CV & Kişisel Sayfa</span>
+
+        <h1>Ahmet Parmaksızoğlu</h1>
+
+        <p class="subtitle">
+          Web Geliştirici Adayı • Müşteri Temsilcisi • Teknik Destek
+        </p>
+
+        <p>
+          HTML, CSS, JavaScript ve temel backend bilgisiyle web projeleri geliştiriyorum.
+          Aynı zamanda müşteri iletişimi, teknik destek, hosting ve sunucu sistemleri
+          alanlarında kendimi geliştirmeye devam ediyorum.
+        </p>
+
+        <div class="buttons">
+          <a href="cv.pdf" class="btn">CV İndir</a>
+          <a href="https://www.linkedin.com/in/ahmetpar1/" target="_blank" class="btn secondary">LinkedIn</a>
+          <a href="#contact" class="btn secondary">İletişim</a>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>Hakkımda</h2>
+    <div class="card">
+      <p>
+        Erzincan doğumluyum. Çağrı merkezi sektöründe müşteri temsilcisi olarak çalışırken
+        yazılım, web geliştirme ve sistem yönetimi alanlarında kendimi geliştirmeye devam ediyorum.
+        Problem çözme, müşteri iletişimi ve teknik destek konularında deneyim sahibiyim.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Yetenekler</h2>
+
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Bootstrap</div>
+      <div class="skill">Python</div>
+      <div class="skill">PHP</div>
+      <div class="skill">MySQL</div>
+      <div class="skill">GitHub</div>
+      <div class="skill">Linux</div>
+      <div class="skill">WordPress</div>
+      <div class="skill">Joomla</div>
+      <div class="skill">DNS & Hosting</div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Deneyim</h2>
+
+    <div class="card timeline">
+      <div class="timeline-item">
+        <h3>Pusula Call Center</h3>
+        <span>Müşteri Temsilcisi</span>
+        <p>
+          Müşteri destek süreçleri, çağrı yönetimi, problem çözme,
+          iletişim ve kriz yönetimi alanlarında deneyim sahibiyim.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Eğitim</h2>
+
+    <div class="card">
+      <h3>Yıldızkent Nafizbey Mesleki ve Teknik Anadolu Lisesi</h3>
+      <p>
+        Kendi kendime yazılım, web geliştirme, sistem yönetimi ve sunucu teknolojileri
+        üzerine çalışmalar yapıyorum.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+
+    <div class="contact-grid">
+      <div class="contact-item">
+        <strong>E-posta</strong>
+        <a href="mailto:ahmetpar1@hotmail.com">ahmetpar1@hotmail.com</a>
+      </div>
+
+      <div class="contact-item">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/ahmetpar1/" target="_blank">linkedin.com/in/ahmetpar1</a>
+      </div>
+
+      <div class="contact-item">
+        <strong>GitHub</strong>
+        <a href="https://github.com/ahmetpar1" target="_blank">github.com/ahmetpar1</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ahmet Parmaksızoğlu | CV & Kişisel Sayfa</p>
+  </footer>
+
+</body>
+</html>
